@@ -1,5 +1,5 @@
-#import "@preview/mantys:0.1.4": *
-#import "@preview/cheq:0.1.0": *
+#import "./manual-template.typ": *
+#import "../src/tutorial.typ": *
 
 #show: checklist.with(fill: eastern.lighten(95%), stroke: eastern, radius: .2em)
 
@@ -22,196 +22,208 @@
   box(L + h(-a.width * 0.67) + A + h(-a.width * 0.25) + TeX)
 })
 
-//-------------------------------------------------------------------------------------
+//---------------------------------------------------------
 #let abstract = [
-  #package[Elsearticle] is a Typst template that aims to mimic the Elsevier article #LaTeX class, a.k.a. elsearticle.cls, provided by Elsevier to format manuscript properly for submission to their journals.
+  #package[Tutorial] est un modèle #typst pour la rédaction de sujets d'exercices ou d'examens
 ]
 
-#show: mantys.with(
-  name: "Elsearticle class for Typst",
+#show: manual-template.with(
+  title: "Modèle pour les sujets d'exercices",
+  subtitle: "",
+  typst-version: "Typst 0.11.1",
   version: "0.1.0",
-  date: datetime.today(),
-  license: "MIT",
-  authors: ("Mathieu Aucejo"),
   abstract: abstract
 )
 
-= About
+= Qu'est-ce que Typst ?
 
-#package[Elsearticle] is a Typst template that aims to mimic the Elsevier article #LaTeX class, a.k.a. elsearticle.cls, provided by Elsevier to format manuscript properly for submission to their journals.
+#typst est un nouveau langage de balise open source é crit en Rust et développé à partir de 2019 par deux étudiants allemands, Laurenz Mädje et Martin Haug. La version 0.1.0 a été publiée sur GitHub le 04 avril 2023#footnote[Adresse du dépôt GitHub : #link("https://github.com/typst/typst", text("https://github.com/typst/typst", fill: typst-color))].
 
-#package[Elsearticle] is designed to be as close as possible to the original class, whose specification can be found in the #link("http://assets.ctfassets.net/o78em1y1w4i4/3ro3yQff1q67JHmLi1sAqV/1348e3852f277867230fc4b84a801734/elsdoc-1.pdf")[#text("documentation", fill: eastern)].  The template is still in development and may not be fully compatible with all Elsevier journals.
+#typst se présente comme un successeur de #LaTeX plus moderne, rapide et simple d'utilisation. Parmi ses avantages, on peut citer :
 
-This manual provides an overview of the features of the #package[Elsearticle] template and how to use it.
+- la compilation incrémentale ;
+- des messages d'erreur clair et compréhensible ;
+- un langage de programmation Turing-complet ;
+- une système de style cohérent permettant de configurer aisément tous les aspects de son document (police, pagination, marges, #sym.dots) ;
+- une communauté active et sympathique (serveur Discord pour le support, annonce de nouveaux paquets) ;
+- un système de paquets simple d'utilisation (pour rechercher ou voir la liste des paquets, n'hésitez pas à visiter #link("https://typst.app/universe", text("Typst: Universe", fill: typst-color))) ;
+- des extensions pour VS Code existent, comme `Typst LSP` ou `Typst preview`, pour avoir des fonctionnalités similaires à `LaTeX Workshop`.
 
+#v(0.5em)
 
-#wbox[The template is provided as is by the Typst community and is not affiliated with Elsevier.]
+Pour finir, la documentation de #typst est suffisamment bien écrite et détaillée pour permettre de créer rapidement ses propres documents. Il faut compter moins d'une heure pour prendre en main la syntaxe (sans mentir #emoji.face.beam). Pour accéder à la documentation, suivez ce #link("https://typst.app/docs", text("lien", fill: typst-color)). Pour faciliter la transition de #LaTeX vers #typst, un guide est disponible #link("https://typst.app/docs/guides/guide-for-latex-users/", text("ici", fill: typst-color)).
 
 = Usage
 
-== Using Elsearticle
+== Utilisation du template
 
-To use the #package[Elsearticle] template, you need to include the following line at the beginning of your `typ` file:
-#codesnippet[```typ
-#import "@preview/elsearticle:0.1.0": *
-```
+Pour utiliser le modèle, il faut l'importer dans votre fichier principal `typ` en utilisant la commande suivante.
+
+#codesnippet[
+	```typ
+	#import "./tutorial.typ": *
+	```
 ]
 
-== Initializing the template
+#ibox[
+	#set text(size: 11pt)
 
-After importing #package[Elsearticle], you have to initialize the template by a show rule with the #cmd[elsearticle] command. This function takes an optional argument to specify the title of the document.
-#codesnippet[```typ
-#show: elsearticle.with(
-  ...
+	Si vous décomposez votre document en différents fichiers, il faut insérer la commande précédente en préambule de chaque fichier.
+]
+
+== Initilisation du modèle
+
+Après avoir importé le modèle, celui doit être initialisé en appliquant une règle d'affichage (`show` rule) avec la commande #cmd("tutorial") en passant les options nécessaires avec l'instruction `with` dans votre fichier principal `typ` :
+
+#codesnippet(
+	```typ
+	#show tutorial.with(
+	  ...
+	)
+	```
 )
-```
-]
 
-#cmd[elsearticle] takes the following arguments:
-#command("elsearticle", ..args(
+Le modèle #cmd("tutorial") possède un certain nombre de paramètres permettant de personnaliser le document. Voici la liste des paramètres disponibles :
+#command("tutorial", ..args(
   title: none,
-  authors: (),
-  abstract: none,
-  journal: none,
-  keywords: none,
-  format: "preprint",
-  numcol: 1,
+  subtitle: none,
+  docfont: "Lato",
+  docfontmath: "Lete Sans Math",
   [body])
-)[#argument("title", default: none, types: "string")[Title of the paper]
+)[#argument("title", default: none, types: "string")[Titre du document]
 
-#argument("authors", default: (), types: "array")[List of the authors of the paper
+#argument("subtitle", default: (), types: "string")[Sous-titre du document]
 
-Each element of the #dtype("array") is a #dtype("dict") definining an author. The author #dtype("dictionary") has the following keys:
-- `name` #dtype("string"): Name of the author
-- `affiliation` #dtype("string"): Affiliation of the author
-- `corr` #dtypes("string", none): email address of the corresponding author
-- `id` #dtype("string"): ID of the author
+#argument("docfont", default: none, types: "string")[Police de caractectères pour le corps du texte]
 
-#codesnippet[```typc
-authors: (
-    (
-      name: "J. Doe",
-      affiliation: "Laboratory 1, University 1, City 1",
-      corr: "jdoe@univ.edu",
-      id: "a",
-    ),
-    (
-      name: "J. Smith",
-      affiliation: "Laboratory 2, University 2, City 2",
-      corr: none,
-      id: "b"
-    ),
-  )
-```]
+#argument("docfontmath", default: none, types: "string")[Police de caractères pour les équations mathématiques]
 ]
 
-#argument("abstract", default: none, types: "content")[Abstract of the paper]
+== Fonctions additionnelles
 
-#argument("journal", default: none, types: "string")[Name of the journal]
+Le modèle #package[Tutorial] fournit un certain nombre de fonctions additionnelles pour faciliter la rédaction de votre document.
 
-#argument("keywords", default: none, types: "array")[List of the keywords of the paper
+=== Environnements
 
-Each element of the #dtype("array") is a #dtype("string") representing a keyword
+*Exercice*
 
-#codesnippet[```typc
-keywords: ("Keyword 1", "Keyword 2")
-```]
-]
-
-#argument("format", default: "review", types: "string")[Format of the paper. Possible values are "preprint", "review", "1p", "3p" and "5p"
-]
-
-#argument("numcol", default: 1, types: "number")[Number of columns of the paper. Possible values are 1 and 2
-
-#ibox[According to the documentation of `elsearticle.cls` (see #link("https://assets.ctfassets.net/o78em1y1w4i4/3ro3yQff1q67JHmLi1sAqV/1348e3852f277867230fc4b84a801734/elsdoc-1.pdf", "here")), the number of columns is related to the format of the paper:
-- 1p: Single column only
-- 3p: Single or double column possible
-- 5p: Double column only
-
-To avoid unexpected behaviors, the value of the `numcol` argument is set to 1 by default and restricted to 1 or 2.]
-]
-]
-
-== Additional features
-
-The #package[Elsearticle] template provides additional features to help you format your document properly.
-
-=== Appendix
-
-The template allows you to create appendices using the #cmd["appendix"] environment. The appendices are then numbered with capital letters (A, B, C, etc.). Figures, tables and equations are numbered accordingly, e.g. Eq. (A.1).
-
-To activate the appendix environment, all you have to do is to place the following command in your document:
+Pour créer un nouvel exercice, il suffit d'utiliser la commande #cmd("exercice") :
 #codesnippet[
   ```typ
-  #show: appendix
-
-  // Appendix content here
+  #exercice("Titre de l'exercice")[Texte de l'exercice]
   ```
 ]
 
-=== Subfigures
+#ibox[La numérotation des exercices est automatique.]
 
-Subfigures are not built-in features of Typst, but the #package[Elsearticle] template provides a way to handle them. It is based on the #package[subpar] package that allows you to create subfigures and properly reference them.
+*Question*
 
-To create a subfigure, you can use the following syntax:
-
+Pour ajouter une question à un exercice, il suffit d'utiliser la commande #cmd("question") :
 #codesnippet[
-  ```typc
+  ```typ
+  #question[Texte de la question]
+  ```
+]
+
+#ibox[La numéroration des questions est automatique et est réinitialisée pour chaque exercice.]
+
+*Correction*
+
+Pour ajouter une correction à une question, il suffit d'utiliser la commande #cmd("correction") :
+
+#example-box[
+```typ
+// À mettre au début du document
+// Mettre le paramètre `false` pour masquer les corrections
+#let corr = true
+
+// À mettre à la suite de la question
+#let rep = [Correction]
+#correction(corr, rep)
+```
+#align(center)[#line(stroke: 1pt + typst-color, length: 95%)]
+#let corr = true
+#let rep = [Correction]
+#correction(corr, rep)
+]
+
+#pagebreak()
+=== Boîtes englobantes
+
+Les boîtes englobantes sont des éléments graphiques permettant de mettre en avant des informations importantes. Le modèle #package[Tutorial] en propose actuelle trois types : `obj`, `reco` et `info`.
+
+#v(0.5em)
+
+1. La boîte `obj` est utilisée pour mettre en avant les objectifs des exercices ou de l'examen.
+#example-box[
+```typ
+#obj[
+  + Objectif 1
+  + Objectif 2
+]
+```
+#align(center)[#line(stroke: 1pt + typst-color, length: 95%)]
+
+#obj[
+  + Objectif 1
+  + Objectif 2
+]
+]
+
+#v(0.5em)
+
+2. La boîte `reco` est utilisée pour mettre en avant les recommandations pour la réalisation des exercices ou de l'examen.
+
+#example-box[
+```typ
+#reco[
+  #lorem(20)
+]
+```
+#align(center)[#line(stroke: 1pt + typst-color, length: 95%)]
+
+#reco[
+  #lorem(20)
+]
+]
+
+3. La boîte `info` est utilisée pour mettre en avant des informations importantes.
+
+#example-box[
+```typ
+#info[
+  #lorem(20)
+]
+```
+#align(center)[#line(stroke: 1pt + typst-color, length: 95%)]
+
+#info[
+  #lorem(20)
+]
+]
+
+=== Sous-figures
+
+#typst ne dispose pas actuellement de mécanismes permettant de gérer les sous-figures (numérotation et référencement). Pour pallier ce manque, le modèle intègre une fonction #cmd("subfigure") permettant de gérer les sous-figures de manière adaptée. Cette fonction encapsule la fonction #cmd("subpar.grid") du package `subpar`.
+#codesnippet[
+  ```typ
   #subfigure(
     figure(image("image1.png"), caption: []), <figa>,
     figure(image("image2.png"), caption: []), <figb>,
     columns: (1fr, 1fr),
-    caption: [(a) Left image and (b) Right image],
+    caption: [(a) Première image and (b) Seconde image],
     label: <fig>
   )
   ```
 ]
 
-#ibox[The #cmd("subfigure") function is a wrapper around the #cmd[subpar.grid] function. The numbering is adapted to the context of the document (normal section or appendix).]
+= Feuille de route
 
-=== Equations
+Le modèle #package[Tutorial] est en cours de développement. Certaines fonctionnalités devront être implémentées dans les prochaines versions. Voici la liste des fonctionnalités actuelles et à venir :
 
-The equations are numbered with the format "(1)", "(2)" in normal sections and with the format "(A.1)", "(A.2)" in appendices. In addition to these numbering patterns, the #package[Elsearticle] template provides the #cmd("nonumeq") to create unnumbered equations. The latter function can be used as follows:
-
-#codesnippet[
-  ```typ
-  #nonumeq[$
-    y = f(x)
-    $
-  ]
-  ```
-]
-
-= Roadmap
-
-The #package[Elsearticle] template is still in development. Here are some of the features that are planned for future releases :
-
-*Article format*
-
-- [x] Preprint
-- [x] Review
-- [x] 1p
-- [x] 3p
-- [x] 5p
-
-*Environment*
-
-- [x] Implementation of the `appendix` environment
-
-*Figures and tables*
-
-- [x] Implementation of the `subfigure` environment
-- [x] Proper referencing of figure, subfigures and tables w.r.t. the context
-- [x] Recreation of the `link` to cross-reference figures, subfigures and tables
-
-*Equations*
-
-- [x] Proper referencing of equations w.r.t. the context
-- [ ] Numbering each equation of a system as "(1a)" -- _On going discussions at the Typst dev level_
-
-*Other features*
-
-- [ ] Line numbering - a PR is currently open on the Typst repo -- #link("https://github.com/typst/typst/pull/4516")[#text("See here", fill: eastern)]
+- [x] Mise en place du modèle de base
+- [ ] Ajout de boîtes englobantes (`warning`, `tip`, `important`)
+- [ ] Ajout de zones de réponses
 
 
 

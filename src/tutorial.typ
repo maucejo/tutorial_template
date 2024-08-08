@@ -152,8 +152,8 @@
 // Document
 #let tutorial(
   // The paper's title.
-  title: "Paper Title",
-  subtitle: "",
+  title: none,
+  subtitle: none,
   docfont: "Lato",
   docfontmath: "Lete Sans Math",
   body
