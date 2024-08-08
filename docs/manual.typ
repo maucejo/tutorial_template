@@ -47,7 +47,7 @@
 - une système de style cohérent permettant de configurer aisément tous les aspects de son document (police, pagination, marges, #sym.dots) ;
 - une communauté active et sympathique (serveur Discord pour le support, annonce de nouveaux paquets) ;
 - un système de paquets simple d'utilisation (pour rechercher ou voir la liste des paquets, n'hésitez pas à visiter #link("https://typst.app/universe", text("Typst: Universe", fill: typst-color))) ;
-- des extensions pour VS Code existent, comme `Typst LSP` ou `Typst preview`, pour avoir des fonctionnalités similaires à `LaTeX Workshop`.
+- des extensions pour VS Code existent, comme `Typst LSP` ou `Tinymist`, pour avoir des fonctionnalités similaires à `LaTeX Workshop`.
 
 #v(0.5em)
 
