@@ -1,0 +1,15 @@
+[package]
+name = "tutorial"
+version = "0.1.0"
+authors = ["Mathieu Aucejo"]
+license = "MIT"
+description = "Template for tutorials"
+entrypoint = "src/tutorial.typ"
+categories = ["report"]
+repository = "https://github.com/maucejo/elsearticle"
+
+[template]
+path = "template"
+entrypoint = "main.typ"
+
+

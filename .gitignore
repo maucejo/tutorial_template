@@ -1,0 +1,5 @@
+.github
+/scripts
+Justfile
+.typstignore
+/template/main.pdf

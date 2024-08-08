@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   id="svg116"
+   sodipodi:docname="bielle_manivelle3.svg"
+   width="709.35919"
+   height="173.81052"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:latexdraw="http://latexdraw.sourceforge.net/namespaces/latexdraw">
+  <sodipodi:namedview
+     id="namedview118"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="1.8903321"
+     inkscape:cx="253.13012"
+     inkscape:cy="108.97556"
+     inkscape:window-width="1920"
+     inkscape:window-height="974"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g110" />
+  <g
+     id="g110"
+     transform="translate(-131.14078,-170.60753)">
+    <g
+       latexdraw:type="joinedLines"
+       id="id906735922">
+      <polyline
+         points="162.5,313.710935 830.6481481481478,313.710935 "
+         stroke-width="0.5"
+         stroke="#000000"
+         latexdraw:rotationAngle="0.0"
+         id="polyline2" />
+    </g>
+    <g
+       latexdraw:type="circle"
+       id="id1421622965">
+      <circle
+         cx="162.5"
+         cy="313.71094"
+         r="9"
+         latexdraw:borderPos="outer"
+         stroke-width="2"
+         stroke="#000000"
+         fill="none"
+         id="circle5" />
+    </g>
+    <g
+       latexdraw:type="circle"
+       id="id836723705">
+      <circle
+         cx="572.5"
+         cy="313.71094"
+         r="9"
+         latexdraw:borderPos="outer"
+         stroke-width="2"
+         stroke="#000000"
+         fill="none"
+         id="circle8" />
+    </g>
+    <g
+       latexdraw:type="rectangle"
+       id="id589178148">
+      <rect
+         x="732.5"
+         y="307.71094"
+         width="38"
+         height="11"
+         latexdraw:borderPos="outer"
+         stroke-width="2"
+         stroke="#000000"
+         fill="#ffffff"
+         id="rect11" />
+    </g>
+    <g
+       latexdraw:type="circle"
+       id="id880912922">
+      <circle
+         cx="293.5"
+         cy="226.71094"
+         r="9"
+         latexdraw:borderPos="outer"
+         stroke-width="2"
+         stroke="#000000"
+         fill="none"
+         id="circle14" />
+    </g>
+    <g
+       latexdraw:type="joinedLines"
+       id="id658447539">
+      <polyline
+         points="162.5,314.710935 286.5,231.710937 "
+         stroke-width="2"
+         stroke="#000000"
+         latexdraw:rotationAngle="0.0"
+         id="polyline17" />
+    </g>
+    <g
+       latexdraw:type="joinedLines"
+       id="id1907762607"
+       transform="matrix(1.0021409,0,0,1.0319111,-0.63698316,-7.3078129)">
+      <polyline
+         points="301.5,229.7109375 562.5,310.71094 "
+         stroke-width="2"
+         stroke="#000000"
+         latexdraw:rotationAngle="0.0"
+         id="polyline20" />
+    </g>
+    <g
+       latexdraw:type="joinedLines"
+       id="id1346516312"
+       transform="matrix(1.000929,0,0,1,-0.68139874,-1)">
+      <polyline
+         points="582.5,314.710935 733.5,314.710935 "
+         stroke-width="2"
+         stroke="#000000"
+         latexdraw:rotationAngle="0.0"
+         id="polyline23" />
+    </g>
+    <g
+       latexdraw:type="joinedLines"
+       id="id814268969"
+       transform="translate(0,-1)">
+      <polyline
+         points="771.5,314.710935 840.4999999999999,314.710935 "
+         stroke-width="2"
+         stroke="#000000"
+         latexdraw:rotationAngle="0.0"
+         id="polyline26" />
+    </g>
+    <g
+       latexdraw:type="joinedLines"
+       id="id291792348">
+      <polyline
+         points="162.5,323.710935 162.5,338.71094 "
+         stroke-width="2"
+         stroke="#000000"
+         latexdraw:rotationAngle="0.0"
+         id="polyline29" />
+    </g>
+    <g
+       latexdraw:type="joinedLines"
+       id="id113861812">
+      <polyline
+         points="751.5,318.71094 751.5,338.71094 "
+         stroke-width="2"
+         stroke="#000000"
+         latexdraw:rotationAngle="0.0"
+         id="polyline32" />
+    </g>
+    <g
+       latexdraw:type="joinedLines"
+       id="id1942298078">
+      <polyline
+         points="152.5,338.71094 172.5,338.71094 "
+         stroke-width="2"
+         stroke="#000000"
+         latexdraw:rotationAngle="0.0"
+         id="polyline35" />
+    </g>
+    <g
+       latexdraw:type="joinedLines"
+       id="id203673751">
+      <polyline
+         points="741.5,338.71094 761.5,338.71094 "
+         stroke-width="2"
+         stroke="#000000"
+         latexdraw:rotationAngle="0.0"
+         id="polyline38" />
+    </g>
+    <g
+       latexdraw:type="joinedLines"
+       id="id1523343281">
+      <polyline
+         points="152.5,338.71094 157.5,343.71094 "
+         stroke-width="2"
+         stroke="#000000"
+         latexdraw:rotationAngle="0.0"
+         id="polyline41" />
+    </g>
+    <g
+       latexdraw:type="joinedLines"
+       id="id1643885334">
+      <polyline
+         points="157.5,338.71094 162.5,343.71094 "
+         stroke-width="2"
+         stroke="#000000"
+         latexdraw:rotationAngle="0.0"
+         id="polyline44" />
+    </g>
+    <g
+       latexdraw:type="joinedLines"
+       id="id1708001286">
+      <polyline
+         points="162.5,338.71094 167.5,343.71094 "
+         stroke-width="2"
+         stroke="#000000"
+         latexdraw:rotationAngle="0.0"
+         id="polyline47" />
+    </g>
+    <g
+       latexdraw:type="joinedLines"
+       id="id657395197">
+      <polyline
+         points="167.5,338.71094 172.5,343.71094 "
+         stroke-width="2"
+         stroke="#000000"
+         latexdraw:rotationAngle="0.0"
+         id="polyline50" />
+    </g>
+    <g
+       latexdraw:type="joinedLines"
+       id="id320664483">
+      <polyline
+         points="172.5,338.71094 177.5,343.71094 "
+         stroke-width="2"
+         stroke="#000000"
+         latexdraw:rotationAngle="0.0"
+         id="polyline53" />
+    </g>
+    <g
+       latexdraw:type="joinedLines"
+       id="id1782179355">
+      <polyline
+         points="742.5,338.71094 747.5,343.71094 "
+         stroke-width="2"
+         stroke="#000000"
+         latexdraw:rotationAngle="0.0"
+         id="polyline56" />
+    </g>
+    <g
+       latexdraw:type="joinedLines"
+       id="id925811685">
+      <polyline
+         points="747.5,338.71094 752.5,343.71094 "
+         stroke-width="2"
+         stroke="#000000"
+         latexdraw:rotationAngle="0.0"
+         id="polyline59" />
+    </g>
+    <g
+       latexdraw:type="joinedLines"
+       id="id605585578">
+      <polyline
+         points="752.5,338.71094 757.5,343.71094 "
+         stroke-width="2"
+         stroke="#000000"
+         latexdraw:rotationAngle="0.0"
+         id="polyline62" />
+    </g>
+    <g
+       latexdraw:type="joinedLines"
+       id="id991108533">
+      <polyline
+         points="757.5,338.71094 762.5,343.71094 "
+         stroke-width="2"
+         stroke="#000000"
+         latexdraw:rotationAngle="0.0"
+         id="polyline65" />
+    </g>
+    <g
+       latexdraw:type="joinedLines"
+       id="id331108848">
+      <polyline
+         points="648.5,313.710935 674.5,207.7109375 "
+         stroke-width="0.5"
+         stroke="#000000"
+         latexdraw:rotationAngle="0.0"
+         id="polyline92" />
+    </g>
+    <g
+       latexdraw:type="joinedLines"
+       id="id1074926877">
+      <polyline
+         points="674.5,207.7109375 691.5,207.7109375 "
+         stroke-width="0.5"
+         stroke="#000000"
+         latexdraw:rotationAngle="0.0"
+         id="polyline95" />
+    </g>
+    <g
+       latexdraw:type="joinedLines"
+       id="id1752821932">
+      <polyline
+         points="462.5,279.71094 494.5,207.7109375 "
+         stroke-width="0.5"
+         stroke="#000000"
+         latexdraw:rotationAngle="0.0"
+         id="polyline98" />
+    </g>
+    <g
+       latexdraw:type="joinedLines"
+       id="id2027463675">
+      <polyline
+         points="494.5,207.7109375 512.5,207.7109375 "
+         stroke-width="0.5"
+         stroke="#000000"
+         latexdraw:rotationAngle="0.0"
+         id="polyline101" />
+    </g>
+    <g
+       latexdraw:type="joinedLines"
+       id="id751866786">
+      <polyline
+         points="246.5,258.710938 228.5,183.710938 "
+         stroke-width="0.5"
+         stroke="#000000"
+         latexdraw:rotationAngle="0.0"
+         id="polyline104" />
+    </g>
+    <g
+       latexdraw:type="joinedLines"
+       id="id18793296"
+       transform="matrix(0.96221375,0,0,1,7.8784341,0)">
+      <polyline
+         points="229.5,183.710938 208.5,183.710938 "
+         stroke-width="0.5"
+         stroke="#000000"
+         latexdraw:rotationAngle="0.0"
+         id="polyline107" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.6667px;font-family:'Quire Sans';-inkscape-font-specification:'Quire Sans';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.667"
+       x="217.60326"
+       y="180.18355"
+       id="text690"><tspan
+         sodipodi:role="line"
+         id="tspan688"
+         x="217.60326"
+         y="180.18355"
+         style="font-size:18.6667px">1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.6667px;font-family:'Quire Sans';-inkscape-font-specification:'Quire Sans Italic';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.667"
+       x="293.5"
+       y="210.2384"
+       id="text1869"><tspan
+         sodipodi:role="line"
+         id="tspan1867"
+         x="293.5"
+         y="210.2384"
+         style="font-size:18.6667px;-inkscape-font-specification:'Quire Sans Italic';font-family:'Quire Sans';font-weight:normal;font-style:italic;font-stretch:normal;font-variant:normal">A</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.6667px;font-family:'Quire Sans';-inkscape-font-specification:'Quire Sans Italic';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.667"
+       x="208.46645"
+       y="269.69974"
+       id="text1873"><tspan
+         sodipodi:role="line"
+         id="tspan1871"
+         x="208.46645"
+         y="269.69974"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.6667px;font-family:'Quire Sans';-inkscape-font-specification:'Quire Sans Italic'">R</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.6667px;font-family:'Quire Sans';-inkscape-font-specification:'Quire Sans Italic';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.667"
+       x="137.39412"
+       y="320.24429"
+       id="text1877"><tspan
+         sodipodi:role="line"
+         id="tspan1875"
+         x="137.39412"
+         y="320.24429"
+         style="font-size:18.6667px;-inkscape-font-specification:'Quire Sans Italic';font-family:'Quire Sans';font-weight:normal;font-style:italic;font-stretch:normal;font-variant:normal">O</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.6667px;font-family:'Quire Sans';-inkscape-font-specification:'Quire Sans Italic';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.667"
+       x="427.29437"
+       y="257.24091"
+       id="text1881"><tspan
+         sodipodi:role="line"
+         id="tspan1879"
+         x="427.29437"
+         y="257.24091"
+         style="font-size:18.6667px;-inkscape-font-specification:'Quire Sans Italic';font-family:'Quire Sans';font-weight:normal;font-style:italic;font-stretch:normal;font-variant:normal">L</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.6667px;font-family:'Quire Sans';-inkscape-font-specification:'Quire Sans';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.667"
+       x="503.51334"
+       y="202.38304"
+       id="text1885"><tspan
+         sodipodi:role="line"
+         id="tspan1883"
+         x="503.51334"
+         y="202.38304"
+         style="font-size:18.6667px">2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.6667px;font-family:'Quire Sans';-inkscape-font-specification:'Quire Sans';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.667"
+       x="683.47998"
+       y="197.8793"
+       id="text1889"><tspan
+         sodipodi:role="line"
+         id="tspan1887"
+         x="683.47998"
+         y="197.8793"
+         style="font-size:18.6667px">3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.6667px;font-family:'Quire Sans';-inkscape-font-specification:'Quire Sans Italic';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.667"
+       x="572.04669"
+       y="299.15112"
+       id="text1893"><tspan
+         sodipodi:role="line"
+         id="tspan1891"
+         x="572.04669"
+         y="299.15112"
+         style="font-size:18.6667px;-inkscape-font-specification:'Quire Sans Italic';font-family:'Quire Sans';font-weight:normal;font-style:italic;font-stretch:normal;font-variant:normal">B</tspan></text>
+  </g>
+  <defs
+     id="defs112" />
+  <metadata
+     id="metadata114">
+    <latexdraw:metadata>
+      <latexdraw:latexIncludes><![CDATA[\usepackage{lmodern}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[T1]{fontenc}
+\usepackage{sfmath}
+\usepackage{mathrsfs}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+]]></latexdraw:latexIncludes>
+      <latexdraw:displayXScale>true</latexdraw:displayXScale>
+      <latexdraw:displayYScale>true</latexdraw:displayYScale>
+      <latexdraw:unit>CM</latexdraw:unit>
+      <latexdraw:zoom>1.3500000000000003</latexdraw:zoom>
+      <latexdraw:magneticGridStyle>CUSTOMISED</latexdraw:magneticGridStyle>
+      <latexdraw:gridGap>10</latexdraw:gridGap>
+      <latexdraw:magneticGrid>false</latexdraw:magneticGrid>
+      <latexdraw:version>3.3.1</latexdraw:version>
+      <latexdraw:size>
+        <latexdraw:width>1680</latexdraw:width>
+        <latexdraw:height>1015</latexdraw:height>
+      </latexdraw:size>
+      <latexdraw:position>
+        <latexdraw:x>1680.0</latexdraw:x>
+        <latexdraw:y>0.0</latexdraw:y>
+      </latexdraw:position>
+    </latexdraw:metadata>
+  </metadata>
+</svg>
