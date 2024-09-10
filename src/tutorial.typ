@@ -36,13 +36,13 @@
 ]
 
 #let pb(bool) = {
-  if bool == true {
+  if bool {
     pagebreak()
   }
 }
 
 #let correction(bool, rep) = {
-  if bool == true {
+  if bool {
     showybox(
   title: [*Réponse*],
   title-style: (
