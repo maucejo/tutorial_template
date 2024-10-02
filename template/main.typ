@@ -12,7 +12,7 @@
   + Objectif 3
 ]
 
-#exercice("Titre de l'exercice")[
+= Titre de l'exercice
 
 == Présentation de l'exercice
 
@@ -39,4 +39,3 @@ La @fig:bielle_manivelle est un mécanisme permettant de transformer un mouvemen
 
 #let rep = [Réponse à la question]
 #correction(corr, rep)
-]

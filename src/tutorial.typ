@@ -26,15 +26,6 @@
   c.update(c => 0)
 }
 
-// Exercice
-#let exercice(title, body) = [
-  #rst(c)
-
-  = #title
-  #v(0.5em)
-  #body
-]
-
 #let pb(bool) = {
   if bool {
     pagebreak()
@@ -149,6 +140,23 @@
   )[#body]
 }
 
+#let indication(body) = {
+  showybox(
+    title: box-title(color-svg("images/icons/info.svg", colors.blue, width: 1em), [*Indication*]),
+    title-style: (
+      color: colors.blue,
+      sep-thickness: 0pt,
+    ),
+    frame: (
+      title-color: colors.light-blue,
+      border-color: colors.blue,
+      body-color: none,
+      thickness: (left: 1pt),
+      radius: 0pt,
+    )
+  )[#body]
+}
+
 // Document
 #let tutorial(
   // The paper's title.
@@ -178,6 +186,7 @@
   // Headings
   set heading(numbering: "1.1.")
   show heading.where(level: 1): it => block(width: 100%)[
+      #rst(c)
       #set text(1.1em)
       #counter(heading).display(it.numbering)
       #it.body
