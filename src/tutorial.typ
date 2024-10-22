@@ -1,5 +1,5 @@
-#import "@preview/showybox:2.0.1": *
 #import "@preview/subpar:0.1.1"
+#import "@preview/showybox:2.0.2": *
 
 #let hs = sym.space.thin
 #let colors = (
@@ -18,7 +18,9 @@
 #let c = counter("question")
 #let question(body) = [
   #c.step()
-  *Question #c.display() #h(0.5em)*
+  #context[
+    *Question #c.get().first() #h(0.5em)*
+  ]
   #body
 ]
 
@@ -35,23 +37,23 @@
 #let correction(bool, rep) = {
   if bool {
     showybox(
-  title: [*Réponse*],
-  title-style: (
-    boxed-style: (
-      anchor: (x: left, y: horizon),
-      offset: (x: -1em, y: 1em),
-      radius: (top-left: 0pt, top-right: 0pt, bottom-left: 0pt, bottom-right: 5pt)
-    )
-  ),
-  frame: (
-    title-color: colors.green,
-    border-color: colors.green,
-    body-color: colors.light-green,
-    thickness: 2pt,
-    body-inset: (top:2em, left: 1em, right: 1em, bottom: 1em)
-  ),
-  align: center,
-  breakable: true
+    title: [*Réponse*],
+    title-style: (
+      boxed-style: (
+        anchor: (x: left, y: horizon),
+        offset: (x: -1em, y: 1em),
+        radius: (top-left: 0pt, top-right: 0pt, bottom-left: 0pt, bottom-right: 5pt)
+      )
+    ),
+    frame: (
+      title-color: colors.green,
+      border-color: colors.green,
+      body-color: colors.light-green,
+      thickness: 2pt,
+      body-inset: (top:2em, left: 1em, right: 1em, bottom: 1em)
+    ),
+    align: center,
+    breakable: true
 )[
   #rep
 ]
@@ -167,7 +169,13 @@
   body
 ) = {
   // Set the body font.
-  set page(paper: "a4", margin: 2cm)
+  set page(
+    paper: "a4",
+    number-align: center,
+    numbering: "1",
+    margin : 2cm
+    )
+
   set strong(delta: 300)
   set text(font: docfont, size: 11pt, lang: "fr", number-type: "lining")
 
@@ -199,8 +207,6 @@
     #text(it.body)
     #v(0.3em)
   ]
-
-  set page(number-align: center, numbering: "1")
 
   // Figures
   set figure.caption(separator: [ : ])

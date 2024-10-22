@@ -1,6 +1,7 @@
+// #import "@preview/tutorial:0.1.0": *
 #import "../src/tutorial.typ": *
 
-#let corr = true
+#let corr = false
 
 #show: tutorial.with(
   title: [Titre du TD]
