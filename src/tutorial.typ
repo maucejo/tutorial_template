@@ -1,5 +1,5 @@
 #import "@preview/subpar:0.1.1"
-#import "@preview/showybox:2.0.2": *
+#import "@preview/showybox:2.0.3": *
 
 #let hs = sym.space.thin
 #let colors = (
@@ -173,7 +173,7 @@
     paper: "a4",
     number-align: center,
     numbering: "1",
-    // margin : 2cm
+    margin : 2cm
     )
 
   set strong(delta: 300)
