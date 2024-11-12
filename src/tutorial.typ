@@ -76,6 +76,7 @@
   align: center
 )[
   #body
+  #v(0.5em)
 ]
 }
 
@@ -96,6 +97,7 @@
   align: center
 )[
   #body
+  #v(0.5em)
 ]
 }
 
@@ -159,6 +161,14 @@
   )[#body]
 }
 
+
+#let appendix(body) = {
+  counter(heading).update(0)
+  set heading(numbering: "A.1.")
+
+  body
+}
+
 // Document
 #let tutorial(
   // The paper's title.
@@ -210,7 +220,7 @@
 
   // Figures
   set figure.caption(separator: [ : ])
-  set figure(supplement: "Figure")
+  set figure(supplement: "Figure", gap: 1em)
 
   // Tables
   show figure.where(kind: table): set figure.caption(position: top)
