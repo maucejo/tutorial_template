@@ -40,3 +40,12 @@ La @fig:bielle_manivelle est un mécanisme permettant de transformer un mouvemen
 
 #let rep = [Réponse à la question]
 #correction(corr, rep)
+
+#show: appendix
+
+= Annexe
+
+#figure(
+  image("images/bielle_manivelle3.svg"),
+  caption: [Schéma cinématique non paramétré d'un système bielle-manivelle],
+)

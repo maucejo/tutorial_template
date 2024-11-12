@@ -164,7 +164,23 @@
 
 #let appendix(body) = {
   counter(heading).update(0)
+  counter(figure.where(kind: image)).update(0)
+  counter(figure.where(kind: table)).update(0)
+
   set heading(numbering: "A.1.")
+
+  let numbering-fig = n => {
+    let h1 = counter(heading).get().first()
+    numbering("A.1", h1, n)
+  }
+
+  show figure.where(kind: image): set figure(
+    numbering: numbering-fig,
+  )
+
+  show figure.where(kind: table): set figure(
+    numbering: numbering-fig,
+  )
 
   body
 }
@@ -220,7 +236,7 @@
 
   // Figures
   set figure.caption(separator: [ : ])
-  set figure(supplement: "Figure", gap: 1em)
+  set figure(supplement: "Figure", gap: 1.25em)
 
   // Tables
   show figure.where(kind: table): set figure.caption(position: top)
