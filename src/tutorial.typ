@@ -237,6 +237,11 @@
   // Figures
   set figure.caption(separator: [ : ])
   set figure(supplement: "Figure", gap: 1.25em)
+  show figure: it => block(width: 100%)[
+    #v(0.5em)
+    #it
+    #v(0.5em)
+  ]
 
   // Tables
   show figure.where(kind: table): set figure.caption(position: top)
