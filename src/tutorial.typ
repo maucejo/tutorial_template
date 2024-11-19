@@ -36,6 +36,7 @@
 
 #let correction(bool, rep) = {
   if bool {
+    v(-1em)
     showybox(
     title: [*Réponse*],
     title-style: (
