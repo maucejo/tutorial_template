@@ -141,7 +141,8 @@
       body-color: none,
       thickness: (left: 1pt),
       radius: 0pt,
-    )
+    ),
+    breakable: true
   )[#body]
 }
 
@@ -158,7 +159,8 @@
       body-color: none,
       thickness: (left: 1pt),
       radius: 0pt,
-    )
+    ),
+  breakable: true
   )[#body]
 }
 
