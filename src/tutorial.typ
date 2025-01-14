@@ -250,7 +250,12 @@
   ]
 
   // Tables
-  show figure.where(kind: table): set figure.caption(position: top)
+  show figure.where(kind: table): it => block(width: 100%)[
+    #v(0.5em)
+    #it.caption
+    #it.body
+    #v(0.5em)
+  ]
 
   // Display the paper's title.
   align(center, text(1.75em, strong(title)))
