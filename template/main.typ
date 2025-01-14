@@ -49,3 +49,20 @@ La @fig:bielle_manivelle est un mécanisme permettant de transformer un mouvemen
   image("images/bielle_manivelle3.svg"),
   caption: [Schéma cinématique non paramétré d'un système bielle-manivelle],
 )
+
+#figure(
+  table(
+  columns: 2,
+  [*Amount*], [*Ingredient*],
+  [360g], [Baking flour],
+  [250g], [Butter (room temp.)],
+  [150g], [Brown sugar],
+  [100g], [Cane sugar],
+  [100g], [70% cocoa chocolate],
+  [100g], [35-40% cocoa chocolate],
+  [2], [Eggs],
+  [Pinch], [Salt],
+  [Drizzle], [Vanilla extract],
+),
+  caption: [Ingredients for a chocolate cake],
+)

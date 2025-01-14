@@ -217,6 +217,7 @@
   // Maths
   set overline(offset: -1em)
   show math.equation: set text(font: docfontmath, stylistic-set: 1)
+  show math.equation: set block(breakable: true)
   set math.vec(delim: "[")
   set math.mat(delim: "[")
 
@@ -229,9 +230,11 @@
       #it.body
       #v(-0.75em)
       #line(length: 100%)
+      #v(0.5em)
     ]
 
   show heading.where(level: 2): it => block(width: 100%)[
+    #v(-0.25em)
     #counter(heading).display()
     #text(it.body)
     #v(0.3em)
@@ -239,7 +242,7 @@
 
   // Figures
   set figure.caption(separator: [ : ])
-  set figure(supplement: "Figure", gap: 1.25em)
+  show figure.where(kind: image): set figure(supplement: "Figure")
   show figure: it => block(width: 100%)[
     #v(0.5em)
     #it
