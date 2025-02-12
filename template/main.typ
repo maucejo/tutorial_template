@@ -1,10 +1,11 @@
 // #import "@preview/tutorial:0.1.0": *
 #import "../src/tutorial.typ": *
 
-#let corr = false
+#let corr = true
 
 #show: tutorial.with(
-  title: [Titre du TD]
+  title: [Titre du TD],
+  lang: "en"
 )
 
 #obj[

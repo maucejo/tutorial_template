@@ -1,6 +1,8 @@
 #import "@preview/subpar:0.1.1"
 #import "@preview/showybox:2.0.3": *
 
+#let state-lang = state("lang")
+
 #let hs = sym.space.thin
 #let colors = (
   blue: rgb(29, 144, 208),
@@ -34,35 +36,43 @@
   }
 }
 
-#let correction(bool, rep) = {
+#let correction(bool, rep) = context {
   if bool {
+    let title = [*Réponse*]
+    if state-lang.get() == "en" {
+      title = [*Answer*]
+    }
     v(-1em)
     showybox(
-    title: [*Réponse*],
-    title-style: (
-      boxed-style: (
-        anchor: (x: left, y: horizon),
-        offset: (x: -1em, y: 1em),
-        radius: (top-left: 0pt, top-right: 0pt, bottom-left: 0pt, bottom-right: 5pt)
-      )
-    ),
-    frame: (
-      title-color: colors.green,
-      border-color: colors.green,
-      body-color: colors.light-green,
-      thickness: 2pt,
-      body-inset: (top:2em, left: 1em, right: 1em, bottom: 1em)
-    ),
-    align: center,
-    breakable: true
-)[
-  #rep
-]
+      title: title,
+      title-style: (
+        boxed-style: (
+          anchor: (x: left, y: horizon),
+          offset: (x: -1em, y: 1em),
+          radius: (top-left: 0pt, top-right: 0pt, bottom-left: 0pt, bottom-right: 5pt)
+        )
+      ),
+      frame: (
+        title-color: colors.green,
+        border-color: colors.green,
+        body-color: colors.light-green,
+        thickness: 2pt,
+        body-inset: (top:2em, left: 1em, right: 1em, bottom: 1em)
+      ),
+      align: center,
+      breakable: true
+  )[
+    #rep
+  ]
 }}
 
-#let obj(body) = {
+#let obj(body) = context {
+  let title = [*Objectifs pédagogiques*]
+    if state-lang.get() == "en" {
+      title = [*Learning objectives*]
+    }
   showybox(
-  title: [*Objectifs pédagogiques*],
+  title: title,
   title-style: (
     boxed-style: (
       anchor: (x: center, y: horizon)
@@ -82,8 +92,12 @@
 }
 
 #let reco(body) = {
+  let title = [*Recommandations*]
+  if state-lang.get() == "en" {
+    title = [*Recommendations*]
+  }
   showybox(
-  title: [#h(0.1em) *Recommandations* #h(0.2em)],
+  title: [#h(0.1em) #title #h(0.2em)],
   title-style: (
     boxed-style: (
       anchor: (x: center, y: horizon)
@@ -128,7 +142,11 @@
   return image.decode(data, ..args)
 }
 
-#let info(body) = {
+#let info(body) = context {
+  let title = [*Remarque*]
+  if state-lang.get() == "en" {
+    title = [*Note*]
+  }
   showybox(
     title: box-title(color-svg("images/icons/info.svg", colors.blue, width: 1em), [*Remarque*]),
     title-style: (
@@ -193,6 +211,7 @@
   // The paper's title.
   title: none,
   subtitle: none,
+  lang: "fr",
   docfont: "Lato",
   docfontmath: "Lete Sans Math",
   body
@@ -206,7 +225,7 @@
     )
 
   set strong(delta: 300)
-  set text(font: docfont, size: 11pt, lang: "fr", number-type: "lining")
+  set text(font: docfont, size: 11pt, lang: lang, number-type: "lining")
 
   // Paragraph
   set par(justify: true)
@@ -242,7 +261,7 @@
 
   // Figures
   set figure.caption(separator: [ : ])
-  show figure.where(kind: image): set figure(supplement: "Figure")
+  show figure.where(kind: image): set figure(supplement: "Figure", gap: 1em)
   show figure: it => block(width: 100%)[
     #v(0.5em)
     #it
@@ -262,6 +281,9 @@
 
   v(-0.5em)
   align(center, subtitle)
+
+  // Update state
+  state-lang.update(lang)
 
   // Display the paper's contents.
   body
