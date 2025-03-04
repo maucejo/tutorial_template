@@ -91,7 +91,7 @@
 ]
 }
 
-#let reco(body) = {
+#let reco(body) = context {
   let title = [*Recommandations*]
   if state-lang.get() == "en" {
     title = [*Recommendations*]
@@ -139,7 +139,7 @@
   ..args,
 ) = {
   let data = colorize(read(path), color)
-  return image.decode(data, ..args)
+  return image(bytes(data), ..args)
 }
 
 #let info(body) = context {
