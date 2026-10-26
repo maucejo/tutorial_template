@@ -1,11 +1,10 @@
 // #import "@preview/tutorial:0.1.0": *
 #import "../src/tutorial.typ": *
 
-#let corr = true
-
 #show: tutorial.with(
   title: [Titre du TD],
-  lang: "en"
+  lang: "en",
+  correction: true
 )
 
 #obj[
@@ -40,7 +39,7 @@ La @fig:bielle_manivelle est un mécanisme permettant de transformer un mouvemen
 ]
 
 #let rep = [Réponse à la question]
-#correction(corr, rep)
+#correction(rep)
 
 #show: appendix
 

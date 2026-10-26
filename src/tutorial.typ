@@ -1,7 +1,8 @@
-#import "@preview/subpar:0.1.1"
-#import "@preview/showybox:2.0.3": *
+#import "@preview/subpar:0.2.2"
+#import "@preview/showybox:2.0.4": *
 
 #let state-lang = state("lang")
+#let state-correction = state("correction")
 
 #let hs = sym.space.thin
 #let colors = (
@@ -30,16 +31,16 @@
   c.update(c => 0)
 }
 
-#let pb(bool) = {
-  if bool {
+#let pb = context{
+  if state-correction.get() {
     pagebreak()
   }
 }
 
-#let correction(bool, rep) = context {
-  if bool {
+#let correction(rep) = context {
+  if state-correction.get() {
     let title = [*Réponse*]
-    if state-lang.get() == "en" {
+    if state-lang.get().contains("en") {
       title = [*Answer*]
     }
     v(-1em)
@@ -68,8 +69,33 @@
 
 #let obj(body) = context {
   let title = [*Objectifs pédagogiques*]
-    if state-lang.get() == "en" {
+    if state-lang.get().contains("en") {
       title = [*Learning objectives*]
+    }
+  showybox(
+  title: title,
+  title-style: (
+    boxed-style: (
+      anchor: (x: center, y: horizon)
+    )
+  ),
+  frame: (
+    title-color: colors.blue,
+    border-color: colors.blue,
+    body-color: colors.light-blue,
+    thickness: 2pt
+  ),
+  align: center
+)[
+  #body
+  #v(0.5em)
+]
+}
+
+#let com(body) = context {
+  let title = [*Compétences visées*]
+    if state-lang.get().contains("en") {
+      title = [*Learning skills*]
     }
   showybox(
   title: title,
@@ -93,7 +119,7 @@
 
 #let reco(body) = context {
   let title = [*Recommandations*]
-  if state-lang.get() == "en" {
+  if state-lang.get().contains("en") {
     title = [*Recommendations*]
   }
   showybox(
@@ -148,7 +174,7 @@
     title = [*Note*]
   }
   showybox(
-    title: box-title(color-svg("images/icons/info.svg", colors.blue, width: 1em), [*Remarque*]),
+    title: box-title(color-svg("images/icons/info.svg", colors.blue, width: 1em), [#title]),
     title-style: (
       color: colors.blue,
       sep-thickness: 0pt,
@@ -214,6 +240,7 @@
   lang: "fr",
   docfont: "Lato",
   docfontmath: "Lete Sans Math",
+  correction: false,
   body
 ) = {
   // Set the body font.
@@ -225,7 +252,7 @@
     )
 
   set strong(delta: 300)
-  set text(font: docfont, size: 11pt, lang: lang, number-type: "lining")
+  set text(font: docfont, size: 11pt, lang: lang, number-type: "lining", ligatures: false)
 
   // Paragraph
   set par(justify: true)
@@ -284,6 +311,7 @@
 
   // Update state
   state-lang.update(lang)
+  state-correction.update(correction)
 
   // Display the paper's contents.
   body
