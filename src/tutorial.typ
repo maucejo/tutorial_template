@@ -92,7 +92,7 @@
 ]
 }
 
-#let com(body) = context {
+#let comp(body) = context {
   let title = [*Compétences visées*]
     if state-lang.get().contains("en") {
       title = [*Learning skills*]
