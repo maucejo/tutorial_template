@@ -19,10 +19,13 @@
 
 // Questions et réponses
 #let c = counter("question")
-#let question(body) = [
+#let question(points: none, body) = [
   #c.step()
   #context[
     *Question #c.get().first() #h(0.5em)*
+    #if points != none [
+      #h(-0.25em) *(#points points)* #h(0.5em)
+    ]
   ]
   #body
 ]
